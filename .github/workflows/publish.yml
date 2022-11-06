@@ -7,18 +7,28 @@ on:
       - package.json
 
 jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ 'ubuntu-latest', 'macos-latest' ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+      - name: Test and build
+        run: |
+          yarn install
+          yarn postinstall
+          yarn test
   publish:
     runs-on: ubuntu-latest
+    needs:
+      - test
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
         with:
           persist-credentials: false
-      - name: Install and Build 🔧
-        run: |
-          yarn install
-          yarn postinstall
-          yarn test
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
