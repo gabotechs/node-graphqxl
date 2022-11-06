@@ -1,0 +1,29 @@
+{
+  "name": "node-graphqxl",
+  "version": "0.22.0",
+  "description": "Search houses",
+  "main": "index.js",
+  "author": "Gabriel Musat",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "yarn@3.2.4",
+  "bin": {
+    "graphqxl": "bin/graphqxl"
+  },
+  "scripts": {
+    "postinstall": "node install.js",
+    "run": "esr src/main.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "mocha src/**/*.test.ts",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  },
+  "files": [
+    "bin",
+    "install.js"
+  ]
+}

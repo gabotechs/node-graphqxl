@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+const childProcess = require('child_process')
+const path = require('path')
+
+try {
+  childProcess.execFileSync(
+      path.join(__dirname, "..", "graphqxl"),
+      process.argv.slice(2),
+    { stdio: "inherit" }
+  );
+} catch(e) {
+    if(e && e.status) process.exit(e.status);
+    throw e;
+}

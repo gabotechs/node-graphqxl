@@ -1,0 +1,26 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - package.json
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+      - name: Install and Build 🔧
+        run: |
+          yarn install
+          yarn lint
+          yarn test
+          yarn build
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
+

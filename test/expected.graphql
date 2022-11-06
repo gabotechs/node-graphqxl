@@ -1,0 +1,10 @@
+type MyType {
+  foo: String!
+}
+
+type Extended {
+  bar: Int
+  foo: String!
+}
+
+
