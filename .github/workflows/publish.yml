@@ -17,9 +17,8 @@ jobs:
       - name: Install and Build 🔧
         run: |
           yarn install
-          yarn lint
+          yarn postinstall
           yarn test
-          yarn build
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}

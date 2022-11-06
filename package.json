@@ -14,7 +14,7 @@
     "postinstall": "node install.js",
     "run": "esr src/main.ts",
     "build": "tsc -p tsconfig.build.json",
-    "test": "mocha src/**/*.test.ts",
+    "test": "mocha test/**/*.test.js",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix"
   },
