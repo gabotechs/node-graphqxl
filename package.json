@@ -1,11 +1,10 @@
 {
   "name": "node-graphqxl",
   "version": "0.21.0",
-  "description": "Search houses",
-  "main": "index.js",
+  "description": "GraphQXL node wrapper",
   "author": "Gabriel Musat",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "packageManager": "yarn@3.2.4",
   "bin": {
     "graphqxl": "bin/graphqxl"
