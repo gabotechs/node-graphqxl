@@ -1,6 +1,7 @@
 # node-graphqxl
 
-Node wrapper for compiling GraphQXL schemas in JS based projects.
+Node wrapper for compiling GraphQXL schemas in JS based projects. The original GraphQXL
+project can be found here https://github.com/gabotechs/graphqxl
 
 ## Install
 
