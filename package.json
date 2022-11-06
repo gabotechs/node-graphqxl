@@ -1,6 +1,6 @@
 {
   "name": "node-graphqxl",
-  "version": "0.22.0",
+  "version": "0.20.0",
   "description": "Search houses",
   "main": "index.js",
   "author": "Gabriel Musat",
