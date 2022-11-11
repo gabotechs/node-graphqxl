@@ -44,3 +44,6 @@ jobs:
           VERSION="$(cat package.json | jq .version -r)"
           git tag "v$VERSION"
           git push --tags
+          gh release create "v$VERSION"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
