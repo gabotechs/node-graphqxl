@@ -1,6 +1,6 @@
 {
   "name": "node-graphqxl",
-  "version": "0.40.0",
+  "version": "0.40.1",
   "description": "GraphQXL node wrapper",
   "author": "Gabriel Musat",
   "license": "MIT",
